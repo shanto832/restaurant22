@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1011457696436",
+    "project_id": "resturent-d45fc",
+    "storage_bucket": "resturent-d45fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011457696436:android:32ef8e6d0224b7b588ede1",
+        "android_client_info": {
+          "package_name": "com.example.resturent"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhJrudKoVqFS9yVFQfpDCO3PwvkGXmPF8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
