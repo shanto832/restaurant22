@@ -72,7 +72,15 @@
                 android:fontFamily="sans-serif-medium"
                 android:textSize="14sp" />
 
-
+            <!-- New "I am a customer" Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCustomer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I am a customer"
+                android:layout_marginTop="16dp"
+                app:cornerRadius="4dp"
+                style="@style/Widget.MaterialComponents.Button" />
         </LinearLayout>
 
         <!-- Progress Bar -->

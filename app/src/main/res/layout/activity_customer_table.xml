@@ -5,39 +5,40 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <Button
-        android:id="@+id/btnAddFood"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tvChooseTable"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Food Item"
+        android:textSize="18sp"
         android:layout_marginBottom="16dp"/>
 
     <Button
-        android:id="@+id/btnSeeCurrentOrders"
+        android:id="@+id/btnTable1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="See Current Food Orders"
-        android:layout_marginBottom="16dp"/>
+        android:text="Table 1"
+
+        android:layout_marginBottom="8dp"/>
 
     <Button
-        android:id="@+id/btnTransactionHistory"
+        android:id="@+id/btnTable2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Transaction History"
-        android:layout_marginBottom="16dp"/>
+        android:text="Table 2"
+        android:layout_marginBottom="8dp"/>
 
     <Button
-        android:id="@+id/btnCustomerDetails"
+        android:id="@+id/btnTable3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Customer Details"
-        android:layout_marginBottom="16dp"/>
+        android:text="Table 3"
+        android:layout_marginBottom="8dp"/>
 
     <Button
-        android:id="@+id/btnWaiterDetails"
+        android:id="@+id/btnTable4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Waiter Details"
-        android:layout_marginBottom="16dp"/>
+        android:text="Table 4"
+        android:layout_marginBottom="8dp"/>
 
 </LinearLayout>

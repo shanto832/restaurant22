@@ -5,39 +5,51 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <Button
-        android:id="@+id/btnAddFood"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Food Item"
+        android:textSize="24sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- EditText for food name -->
+    <EditText
+        android:id="@+id/etFoodName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Food Name"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Image selection -->
+    <ImageView
+        android:id="@+id/ivFoodImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/darker_gray"
+        android:scaleType="centerCrop"
+        android:contentDescription="Food Image" />
+
+    <Button
+        android:id="@+id/btnSelectImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Image from Gallery"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- EditText for food price -->
+    <EditText
+        android:id="@+id/etFoodPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Food Price"
+        android:inputType="numberDecimal"
         android:layout_marginBottom="16dp"/>
 
     <Button
-        android:id="@+id/btnSeeCurrentOrders"
+        android:id="@+id/btnUploadFood"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="See Current Food Orders"
-        android:layout_marginBottom="16dp"/>
-
-    <Button
-        android:id="@+id/btnTransactionHistory"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Transaction History"
-        android:layout_marginBottom="16dp"/>
-
-    <Button
-        android:id="@+id/btnCustomerDetails"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Customer Details"
-        android:layout_marginBottom="16dp"/>
-
-    <Button
-        android:id="@+id/btnWaiterDetails"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Waiter Details"
-        android:layout_marginBottom="16dp"/>
+        android:text="Upload Food Item" />
 
 </LinearLayout>
