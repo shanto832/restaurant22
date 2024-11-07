@@ -39,14 +39,16 @@ dependencies {
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
 
-    implementation platform('com.google.firebase:firebase-bom:33.4.0')
+    implementation platform(libs.firebase.bom)
 
-    implementation 'com.google.firebase:firebase-auth:21.0.1'
-    implementation 'com.google.android.gms:play-services-location:21.0.1'
-    implementation 'com.google.android.gms:play-services-auth:21.2.0'
-    implementation 'com.google.firebase:firebase-firestore'
-    implementation 'com.google.firebase:firebase-storage:20.2.1'
-    implementation 'com.google.android.material:material:1.9.0'
-    implementation 'com.google.firebase:firebase-database:20.3.0' // For Realtime Database
+    implementation libs.firebase.auth
+    implementation libs.play.services.location
+    implementation libs.play.services.auth
+    implementation libs.firebase.firestore
+    implementation libs.firebase.storage
+    implementation libs.material
+    implementation libs.firebase.database
+    implementation libs.google.firebase.firestore
+// For Realtime Database
 //    implementation 'com.google.firebase:firebase-storage:20.2.0' // For Storage
 }

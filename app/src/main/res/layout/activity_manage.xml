@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- res/layout/activity_manage.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -9,35 +10,34 @@
         android:id="@+id/btnAddFood"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Food Item"
-        android:layout_marginBottom="16dp"/>
+        android:text="Add Food"
+        android:layout_marginBottom="8dp" />
 
     <Button
         android:id="@+id/btnSeeCurrentOrders"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="See Current Food Orders"
-        android:layout_marginBottom="16dp"/>
+        android:text="See Current Orders"
+        android:layout_marginBottom="8dp" />
 
     <Button
         android:id="@+id/btnTransactionHistory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Transaction History"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="8dp" />
 
     <Button
         android:id="@+id/btnCustomerDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Customer Details"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="8dp" />
 
     <Button
         android:id="@+id/btnWaiterDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Waiter Details"
-        android:layout_marginBottom="16dp"/>
-
+        android:layout_marginBottom="8dp" />
 </LinearLayout>

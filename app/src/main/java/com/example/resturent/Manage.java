@@ -5,15 +5,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Manage extends AppCompatActivity {
 
     private Button btnAddFood, btnSeeCurrentOrders, btnTransactionHistory, btnCustomerDetails, btnWaiterDetails;
+    private FirebaseFirestore db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manage);
+
+        // Initialize Firestore
+        db = FirebaseFirestore.getInstance();
 
         // Initialize buttons
         btnAddFood = findViewById(R.id.btnAddFood);

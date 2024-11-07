@@ -1,42 +1,25 @@
 package com.example.resturent;
 
-import androidx.annotation.NonNull;
-
 public class FoodItem {
     private String name;
-    private String image;
-    private double price;
+    private String price;
+    private String quantity;
 
-    public FoodItem() {
-        // Default constructor required for calls to DataSnapshot.getValue(FoodItem.class)
-    }
+    // Default constructor required for calls to DataSnapshot.getValue(FoodItem.class)
+    public FoodItem() {}
 
-    public FoodItem(String name, String image, double price) {
+    public FoodItem(String name, String price, String quantity) {
         this.name = name;
-        this.image = image;
         this.price = price;
+        this.quantity = quantity;
     }
 
-    // Getters and setters (if necessary)
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
 
-    public String getImage() {
-        return image;
-    }
+    public String getPrice() { return price; }
+    public void setPrice(String price) { this.price = price; }
 
-    public double getPrice() {
-        return price;
-    }
-
-    @NonNull
-    @Override
-    public String toString() {
-        return "FoodItem{" +
-                "name='" + name + '\'' +
-                ", image='" + image + '\'' +
-                ", price=" + price +
-                '}';
-    }
+    public String getQuantity() { return quantity; }
+    public void setQuantity(String quantity) { this.quantity = quantity; }
 }

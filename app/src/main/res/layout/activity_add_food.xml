@@ -1,55 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- res/layout/activity_add_food.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Food Item"
-        android:textSize="24sp"
-        android:layout_marginBottom="16dp"/>
-
-    <!-- EditText for food name -->
     <EditText
-        android:id="@+id/etFoodName"
+        android:id="@+id/editTextFoodName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Food Name"
-        android:layout_marginBottom="16dp"/>
+        android:inputType="text" />
 
-    <!-- Image selection -->
-    <ImageView
-        android:id="@+id/ivFoodImage"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginBottom="16dp"
-        android:background="@android:color/darker_gray"
-        android:scaleType="centerCrop"
-        android:contentDescription="Food Image" />
-
-    <Button
-        android:id="@+id/btnSelectImage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Select Image from Gallery"
-        android:layout_marginBottom="16dp"/>
-
-    <!-- EditText for food price -->
     <EditText
-        android:id="@+id/etFoodPrice"
+        android:id="@+id/editTextFoodPrice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Food Price"
-        android:inputType="numberDecimal"
-        android:layout_marginBottom="16dp"/>
+        android:inputType="numberDecimal" />
 
-    <Button
-        android:id="@+id/btnUploadFood"
+    <EditText
+        android:id="@+id/editTextFoodQuantity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Upload Food Item" />
+        android:hint="Food Quantity"
+        android:inputType="number" />
 
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
+
+    <Button
+        android:id="@+id/addMoreButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add More" />
 </LinearLayout>
