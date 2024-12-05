@@ -1,44 +1,468 @@
-<!-- res/layout/activity_customer_table.xml -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+<!--&lt;!&ndash; res/layout/activity_customer_table.xml &ndash;&gt;-->
+<!--<LinearLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="vertical"-->
+<!--    android:padding="16dp">-->
 
-    <TextView
-        android:id="@+id/tvChooseTable"
+<!--    <TextView-->
+<!--        android:id="@+id/tvChooseTable"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Choose a table:"-->
+<!--        android:textSize="18sp"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:paddingBottom="20dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnTable1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Table 1" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnTable2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Table 2"-->
+<!--        android:layout_marginTop="8dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnTable3"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Table 3"-->
+<!--        android:layout_marginTop="8dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnTable4"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Table 4"-->
+<!--        android:layout_marginTop="8dp" />-->
+<!--</LinearLayout>-->
+<!--<FrameLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+<!--    &lt;!&ndash; Sharp background image (to fade out) &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/bgSharp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:src="@drawable/your_sharp_background"-->
+<!--        android:scaleType="centerCrop" />-->
+
+<!--    &lt;!&ndash; Blurred background image (initially invisible) &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/bgBlurred"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:src="@drawable/your_blurred_background"-->
+<!--        android:alpha="0"-->
+<!--    android:scaleType="centerCrop" />-->
+
+<!--    &lt;!&ndash; Main content layout &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical"-->
+<!--        android:padding="16dp">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvChooseTable"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Choose a table:"-->
+<!--            android:textSize="18sp"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:paddingBottom="20dp" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnTable1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Table 1" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnTable2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Table 2"-->
+<!--            android:layout_marginTop="8dp" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnTable3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Table 3"-->
+<!--            android:layout_marginTop="8dp" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnTable4"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Table 4"-->
+<!--            android:layout_marginTop="8dp" />-->
+<!--    </LinearLayout>-->
+<!--</FrameLayout>-->
+<!--<FrameLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+<!--    &lt;!&ndash; Sharp background image (to fade out) &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/bgSharp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:src="@drawable/your_sharp_background"-->
+<!--        android:scaleType="centerCrop" />-->
+
+<!--    &lt;!&ndash; Blurred background image (initially invisible) &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/bgBlurred"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:src="@drawable/your_blurred_background"-->
+<!--        android:alpha="0"-->
+<!--        android:scaleType="centerCrop" />-->
+
+<!--    &lt;!&ndash; Main content layout &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:padding="16dp"-->
+<!--        android:layout_gravity="center_horizontal|bottom"-->
+<!--        android:layout_marginBottom="50dp">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvChooseTable"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Choose a table:"-->
+<!--            android:textSize="18sp"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:paddingBottom="20dp" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnTable1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Table 1"-->
+<!--            android:layout_gravity="center_horizontal" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnTable2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Table 2"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_gravity="center_horizontal" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnTable3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Table 3"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_gravity="center_horizontal" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnTable4"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Table 4"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_gravity="center_horizontal" />-->
+<!--    </LinearLayout>-->
+<!--</FrameLayout>-->
+<!--<FrameLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+<!--    &lt;!&ndash; Sharp background image (to fade out) &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/bgSharp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:src="@drawable/your_sharp_background"-->
+<!--        android:scaleType="centerCrop" />-->
+
+<!--    &lt;!&ndash; Blurred background image (initially invisible) &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/bgBlurred"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:src="@drawable/your_blurred_background"-->
+<!--        android:alpha="0"-->
+<!--        android:scaleType="centerCrop" />-->
+
+<!--    &lt;!&ndash; Main content layout &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:padding="16dp"-->
+<!--        android:layout_gravity="center_horizontal|bottom"-->
+<!--        android:layout_marginBottom="50dp">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvChooseTable"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Choose a table:"-->
+<!--            android:textSize="18sp"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:paddingBottom="20dp" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnTable1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Table 1"-->
+<!--            android:backgroundTint="#000000"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:layout_gravity="center_horizontal" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnTable2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Table 2"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:backgroundTint="#000000"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:layout_gravity="center_horizontal" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnTable3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Table 3"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:backgroundTint="#000000"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:layout_gravity="center_horizontal" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnTable4"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Table 4"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:backgroundTint="#000000"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:layout_gravity="center_horizontal" />-->
+<!--    </LinearLayout>-->
+<!--</FrameLayout>-->
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+<!--    &lt;!&ndash; Sharp background image (to fade out) &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/bgSharp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:src="@drawable/your_sharp_background"-->
+<!--        android:scaleType="centerCrop" />-->
+
+<!--    &lt;!&ndash; Blurred background image (initially invisible) &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/bgBlurred"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:src="@drawable/your_blurred_background"-->
+<!--        android:alpha="0"-->
+<!--        android:scaleType="centerCrop" />-->
+
+<!--    &lt;!&ndash; Main content layout &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:padding="16dp"-->
+<!--        android:layout_gravity="center_horizontal|bottom"-->
+<!--        android:layout_marginBottom="50dp">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvChooseTable"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Choose a table:"-->
+<!--            android:textSize="18sp"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:paddingBottom="20dp" />-->
+
+<!--        &lt;!&ndash; EditText for Name &ndash;&gt;-->
+<!--        <EditText-->
+<!--            android:id="@+id/etName"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Enter your name"-->
+<!--            android:textColor="#000000"-->
+<!--            android:padding="12dp"-->
+<!--            android:background="@android:drawable/edit_text" />-->
+
+<!--        &lt;!&ndash; EditText for Phone Number &ndash;&gt;-->
+<!--        <EditText-->
+<!--            android:id="@+id/etPhoneNumber"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Enter your phone number"-->
+<!--            android:textColor="#000000"-->
+<!--            android:padding="12dp"-->
+<!--            android:background="@android:drawable/edit_text"-->
+<!--            android:inputType="phone" />-->
+
+<!--        &lt;!&ndash; Buttons for selecting tables &ndash;&gt;-->
+<!--        <Button-->
+<!--            android:id="@+id/btnTable1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Table 1"-->
+<!--            android:backgroundTint="#000000"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:layout_gravity="center_horizontal" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnTable2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Table 2"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:backgroundTint="#000000"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:layout_gravity="center_horizontal" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnTable3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Table 3"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:backgroundTint="#000000"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:layout_gravity="center_horizontal" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnTable4"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Table 4"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:backgroundTint="#000000"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:layout_gravity="center_horizontal" />-->
+<!--    </LinearLayout>-->
+<!--</FrameLayout>-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Sharp background image (to fade out) -->
+    <ImageView
+        android:id="@+id/bgSharp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/your_sharp_background"
+        android:scaleType="centerCrop" />
+
+    <!-- Blurred background image (initially invisible) -->
+    <ImageView
+        android:id="@+id/bgBlurred"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/your_blurred_background"
+        android:alpha="0"
+        android:scaleType="centerCrop" />
+
+    <!-- Main content layout -->
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose a table:"
-        android:textSize="18sp"
-        android:layout_gravity="center_horizontal"
-        android:paddingBottom="20dp" />
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="50dp">
 
-    <Button
-        android:id="@+id/btnTable1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Table 1" />
+        <TextView
+            android:id="@+id/tvChooseTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose a table:"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="20dp" />
 
-    <Button
-        android:id="@+id/btnTable2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Table 2"
-        android:layout_marginTop="8dp" />
+        <!-- EditText for Name -->
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your name"
+            android:textColor="#000000"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text" />
 
-    <Button
-        android:id="@+id/btnTable3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Table 3"
-        android:layout_marginTop="8dp" />
+        <!-- EditText for Phone Number -->
+        <EditText
+            android:id="@+id/etPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your phone number"
+            android:textColor="#000000"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"
+            android:inputType="phone" />
 
-    <Button
-        android:id="@+id/btnTable4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Table 4"
-        android:layout_marginTop="8dp" />
-</LinearLayout>
+        <!-- Buttons for selecting tables -->
+        <Button
+            android:id="@+id/btnTable1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Table 1"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/btnTable2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Table 2"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/btnTable3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Table 3"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/btnTable4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Table 4"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+</FrameLayout>
+
+
+
+

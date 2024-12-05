@@ -1,41 +1,180 @@
-<!-- res/layout/activity_add_food.xml -->
+<!--<LinearLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="vertical"-->
+<!--    android:padding="16dp"-->
+<!--    android:gravity="center">-->
+
+<!--    &lt;!&ndash; Other input fields for food details &ndash;&gt;-->
+<!--    <EditText-->
+<!--        android:id="@+id/editTextFoodName"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Food Name"-->
+<!--        android:background="@drawable/edittext_border" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/editTextFoodPrice"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Food Price"-->
+<!--        android:background="@drawable/edittext_border"-->
+<!--        android:layout_marginTop="8dp" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/editTextFoodQuantity"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Food Quantity"-->
+<!--        android:background="@drawable/edittext_border"-->
+<!--        android:layout_marginTop="8dp" />-->
+
+<!--    &lt;!&ndash; Image view for showing the selected image &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/imageViewFood"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:contentDescription="Selected food image"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:background="#DDDDDD" />-->
+
+<!--    &lt;!&ndash; Container for buttons centered below the image &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:layout_marginTop="16dp">-->
+
+<!--        <Button-->
+<!--            android:id="@+id/selectImageButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Select Image"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:backgroundTint="#000000"-->
+<!--            android:textColor="#FFFFFF" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/submitButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Submit"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:backgroundTint="#000000"-->
+<!--            android:textColor="#FFFFFF" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/addMoreButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Add More"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:backgroundTint="#000000"-->
+<!--            android:textColor="#FFFFFF" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/adminHomeButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Admin Home"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:backgroundTint="#000000"-->
+<!--            android:textColor="#FFFFFF" />-->
+<!--    </LinearLayout>-->
+
+<!--</LinearLayout>-->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:gravity="center">
 
+    <!-- Other input fields for food details -->
     <EditText
         android:id="@+id/editTextFoodName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:hint="Food Name"
-        android:inputType="text" />
+        android:background="@drawable/edittext_border"
+        android:padding="12dp" />
 
     <EditText
         android:id="@+id/editTextFoodPrice"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:hint="Food Price"
-        android:inputType="numberDecimal" />
+        android:background="@drawable/edittext_border"
+        android:padding="12dp"
+        android:layout_marginTop="8dp" />
 
     <EditText
         android:id="@+id/editTextFoodQuantity"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:hint="Food Quantity"
-        android:inputType="number" />
+        android:background="@drawable/edittext_border"
+        android:padding="12dp"
+        android:layout_marginTop="8dp" />
 
-    <Button
-        android:id="@+id/submitButton"
+    <!-- Image view for showing the selected image -->
+    <ImageView
+        android:id="@+id/imageViewFood"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="Selected food image"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="8dp"
+        android:background="#DDDDDD" />
+
+    <!-- Container for buttons centered below the image -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="16dp">
 
-    <Button
-        android:id="@+id/addMoreButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Add More" />
+        <Button
+            android:id="@+id/selectImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Image"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/addMoreButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add More"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/adminHomeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin Home"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
 </LinearLayout>
+

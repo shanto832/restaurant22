@@ -1,43 +1,280 @@
-<!-- res/layout/activity_manage.xml -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<!--<LinearLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="vertical"-->
+<!--    android:padding="16dp">-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnAddFood"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Add Food"-->
+<!--        android:layout_marginBottom="8dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnSeeCurrentOrders"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="See Current Orders"-->
+<!--        android:layout_marginBottom="8dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnTransactionHistory"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Transaction History"-->
+
+<!--        android:layout_marginBottom="8dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnCustomerDetails"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:text="Chef's " />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnWaiterDetails"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Waiter Details"-->
+<!--        android:layout_marginBottom="8dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnTakeOrder"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Take Order"-->
+<!--        android:layout_marginBottom="8dp" />-->
+<!--</LinearLayout>-->
+<!--<LinearLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="vertical"-->
+<!--    android:padding="16dp">-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnAddFood"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Add Food"-->
+<!--        android:backgroundTint="#FFFFFF"-->
+<!--        android:textColor="#000000"-->
+<!--        android:layout_marginBottom="8dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnSeeCurrentOrders"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="See Current Orders"-->
+<!--        android:backgroundTint="#FFFFFF"-->
+<!--        android:textColor="#000000"-->
+<!--        android:layout_marginBottom="8dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnTransactionHistory"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Transaction History"-->
+<!--        android:backgroundTint="#FFFFFF"-->
+<!--        android:textColor="#000000"-->
+<!--        android:layout_marginBottom="8dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnCustomerDetails"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:backgroundTint="#FFFFFF"-->
+<!--        android:textColor="#000000"-->
+<!--        android:text="Chef's " />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnWaiterDetails"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Waiter Details"-->
+<!--        android:backgroundTint="#FFFFFF"-->
+<!--        android:textColor="#000000"-->
+<!--        android:layout_marginBottom="8dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnTakeOrder"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Take Order"-->
+<!--        android:backgroundTint="#FFFFFF"-->
+<!--        android:textColor="#000000"-->
+<!--        android:layout_marginBottom="8dp" />-->
+<!--</LinearLayout>-->
+
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+<!--    &lt;!&ndash; Background image with initial blur &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/backgroundImage"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/manage_sharp" />-->
+
+<!--    &lt;!&ndash; Button container with vertical orientation, centered &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:paddingBottom="32dp">-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnAddFood"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Add Food"-->
+<!--            android:backgroundTint="#FFFFFF"-->
+<!--            android:textColor="#000000"-->
+<!--            android:layout_marginBottom="16dp" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnSeeCurrentOrders"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="See Current Orders"-->
+<!--            android:backgroundTint="#FFFFFF"-->
+<!--            android:textColor="#000000"-->
+<!--            android:layout_marginBottom="16dp" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnTransactionHistory"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Transaction History"-->
+<!--            android:backgroundTint="#FFFFFF"-->
+<!--            android:textColor="#000000"-->
+<!--            android:layout_marginBottom="16dp" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnCustomerDetails"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Customer Details"-->
+<!--            android:backgroundTint="#FFFFFF"-->
+<!--            android:textColor="#000000"-->
+<!--            android:layout_marginBottom="16dp" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnWaiterDetails"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Waiter Details"-->
+<!--            android:backgroundTint="#FFFFFF"-->
+<!--            android:textColor="#000000"-->
+<!--            android:layout_marginBottom="16dp" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnTakeOrder"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Take Order"-->
+<!--            android:backgroundTint="#FFFFFF"-->
+<!--            android:textColor="#000000"-->
+<!--            android:layout_marginBottom="16dp" />-->
+
+<!--    </LinearLayout>-->
+<!--</RelativeLayout>-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnAddFood"
+    <!-- Sharp background image (to fade out) -->
+    <ImageView
+        android:id="@+id/sharpImage"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Add Food"
-        android:layout_marginBottom="8dp" />
+        android:layout_height="match_parent"
+        android:src="@drawable/posh"
+        android:scaleType="centerCrop" />
 
-    <Button
-        android:id="@+id/btnSeeCurrentOrders"
+    <!-- Blurred background image (initially invisible) -->
+    <ImageView
+        android:id="@+id/blurredImage"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="See Current Orders"
-        android:layout_marginBottom="8dp" />
+        android:layout_height="match_parent"
+        android:src="@drawable/posh"
+        android:alpha="0"
+        android:scaleType="centerCrop" />
 
-    <Button
-        android:id="@+id/btnTransactionHistory"
-        android:layout_width="match_parent"
+    <!-- Main content layout -->
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Transaction History"
-        android:layout_marginBottom="8dp" />
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="50dp">
 
-    <Button
-        android:id="@+id/btnCustomerDetails"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Customer Details"
-        android:layout_marginBottom="8dp" />
+        <Button
+            android:id="@+id/btnAddFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Food"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF" />
 
-    <Button
-        android:id="@+id/btnWaiterDetails"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Waiter Details"
-        android:layout_marginBottom="8dp" />
-</LinearLayout>
+        <Button
+            android:id="@+id/btnSeeCurrentOrders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="See Current Orders"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnTransactionHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transaction History"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnCustomerDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chef's"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnWaiterDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waiter Details"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnTakeOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take Order"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</FrameLayout>

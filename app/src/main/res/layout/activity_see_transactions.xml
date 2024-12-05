@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header row for transaction list -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#FFEB3B">
+
+        <TextView
+            android:id="@+id/header_customer_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Customer Name"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/header_customer_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Phone Number"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/header_food_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Food Name"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/header_unit_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Unit Price"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/header_quantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Quantity"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/header_total_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Total Price"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:padding="4dp" />
+    </LinearLayout>
+
+    <!-- ListView to display transactions -->
+    <ListView
+        android:id="@+id/listViewTransactions"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Total Revenue Text -->
+    <TextView
+        android:id="@+id/totalRevenueText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Revenue: $0.00"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:paddingTop="20dp" />
+</LinearLayout>

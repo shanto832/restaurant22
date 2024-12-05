@@ -1,9 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- Base application theme -->
     <style name="Base.Theme.Resturent" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <!-- Your main app theme -->
     <style name="Theme.Resturent" parent="Base.Theme.Resturent" />
+
+    <!-- Splash screen theme -->
+    <style name="Theme.Splash" parent="Theme.AppCompat.NoActionBar">
+        <!-- Set a white background for the splash screen -->
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
 </resources>

@@ -1,25 +1,96 @@
+
+//package com.example.resturent;
+//
+//public class FoodItem {
+//    private String foodName;
+//    private double foodPrice;
+//    private int foodQuantity;
+//
+//    // No-argument constructor (required for Firestore)
+//    public FoodItem() {}
+//
+//    // Constructor with fields
+//    public FoodItem(String foodName, String foodPrice, String foodQuantity) {
+//        this.foodName = foodName;
+//        this.foodPrice = Double.parseDouble(foodPrice); // Convert String to double
+//        this.foodQuantity = Integer.parseInt(foodQuantity); // Convert String to int
+//    }
+//
+//    // Getters
+//    public String getFoodName() {
+//        return foodName;
+//    }
+//
+//    public double getFoodPrice() {
+//        return foodPrice;
+//    }
+//
+//    public int getFoodQuantity() {
+//        return foodQuantity;
+//    }
+//
+//    // Setters
+//    public void setFoodQuantity(String foodQuantity) {
+//        this.foodQuantity = Integer.parseInt(foodQuantity); // Convert String to int
+//    }
+//
+//    public void setFoodPrice(String foodPrice) {
+//        this.foodPrice = Double.parseDouble(foodPrice); // Convert String to double
+//    }
+//
+//    public void setFoodName(String foodName) {
+//        this.foodName = foodName;
+//    }
+//}
 package com.example.resturent;
-
 public class FoodItem {
-    private String name;
-    private String price;
-    private String quantity;
+    private String foodName;
+    private double foodPrice;
+    private int foodQuantity;
+    private String imageUrl;  // New field for image URL
 
-    // Default constructor required for calls to DataSnapshot.getValue(FoodItem.class)
+    // No-argument constructor (required for Firestore)
     public FoodItem() {}
 
-    public FoodItem(String name, String price, String quantity) {
-        this.name = name;
-        this.price = price;
-        this.quantity = quantity;
+    // Constructor with fields
+    public FoodItem(String foodName, String foodPrice, String foodQuantity, String imageUrl) {
+        this.foodName = foodName;
+        this.foodPrice = Double.parseDouble(foodPrice); // Convert String to double
+        this.foodQuantity = Integer.parseInt(foodQuantity); // Convert String to int
+        this.imageUrl = imageUrl;  // Set the image URL
     }
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    // Getters and Setters
+    public String getFoodName() {
+        return foodName;
+    }
 
-    public String getPrice() { return price; }
-    public void setPrice(String price) { this.price = price; }
+    public double getFoodPrice() {
+        return foodPrice;
+    }
 
-    public String getQuantity() { return quantity; }
-    public void setQuantity(String quantity) { this.quantity = quantity; }
+    public int getFoodQuantity() {
+        return foodQuantity;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public void setFoodQuantity(String foodQuantity) {
+        this.foodQuantity = Integer.parseInt(foodQuantity); // Convert String to int
+    }
+
+    public void setFoodPrice(String foodPrice) {
+        this.foodPrice = Double.parseDouble(foodPrice); // Convert String to double
+    }
+
+    public void setFoodName(String foodName) {
+        this.foodName = foodName;
+    }
 }
+

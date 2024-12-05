@@ -56,6 +56,7 @@
                 android:text="Login"
                 android:layout_marginBottom="16dp"
                 app:cornerRadius="4dp"
+                android:backgroundTint="#000000"
                 style="@style/Widget.MaterialComponents.Button" />
 
             <!-- Sign Up TextView -->
@@ -64,7 +65,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Don't have an account? Sign Up"
-                android:textColor="?attr/colorPrimary"
+                android:textColor="#000000"
                 android:layout_marginTop="16dp"
                 android:padding="8dp"
                 android:clickable="true"
@@ -80,6 +81,7 @@
                 android:text="I am a customer"
                 android:layout_marginTop="16dp"
                 app:cornerRadius="4dp"
+                android:backgroundTint="#000000"
                 style="@style/Widget.MaterialComponents.Button" />
         </LinearLayout>
 
