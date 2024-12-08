@@ -222,7 +222,7 @@
             android:id="@+id/btnAddFood"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Food"
+            android:text="Modify Food"
             android:layout_gravity="center_horizontal"
             android:backgroundTint="#000000"
             android:textColor="#FFFFFF" />

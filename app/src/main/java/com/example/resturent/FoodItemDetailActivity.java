@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.WriteBatch;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -71,35 +73,68 @@ public class FoodItemDetailActivity extends AppCompatActivity {
     // Method to confirm order and save it to Firestore
     private void confirmOrder() {
         if (selectedTableNumber != -1 && foodNames != null && !foodNames.isEmpty() && quantities != null && !quantities.isEmpty()) {
+            // Batch to perform multiple updates atomically
+            WriteBatch batch = db.batch();
+
             for (int i = 0; i < foodNames.size(); i++) {
                 String foodName = foodNames.get(i);
-                int quantity = quantities.get(i);
+                int quantityOrdered = quantities.get(i);
 
-                Map<String, Object> orderData = new HashMap<>();
-                orderData.put("tableNumber", selectedTableNumber);
-                orderData.put("foodName", foodName);
-                orderData.put("quantity", quantity);
-                orderData.put("userName", userName); // Store customer name
-                orderData.put("userPhoneNumber", userPhoneNumber); // Store customer phone number
-                orderData.put("status", "in-progress"); // Order initially in-progress
+                db.collection("FoodItems")
+                        .whereEqualTo("foodName", foodName)
+                        .get()
+                        .addOnSuccessListener(queryDocumentSnapshots -> {
+                            for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
+                                String foodId = document.getId();
+                                String currentQuantityStr = document.getString("foodQuantity");
 
-                // Add the order to Firestore
-                db.collection("OrderWithTable")
-                        .add(orderData)
-                        .addOnSuccessListener(documentReference -> {
-                            orderReference = documentReference;
-                            Toast.makeText(FoodItemDetailActivity.this, "Order confirmed!", Toast.LENGTH_SHORT).show();
-                            startTimer(); // Start countdown timer after order confirmation
+                                if (currentQuantityStr != null) {
+                                    int currentQuantity = Integer.parseInt(currentQuantityStr);
+
+                                    if (currentQuantity >= quantityOrdered) {
+                                        // Calculate the new quantity
+                                        int updatedQuantity = currentQuantity - quantityOrdered;
+
+                                        // Update the food item's quantity
+                                        DocumentReference foodRef = db.collection("FoodItems").document(foodId);
+                                        batch.update(foodRef, "foodQuantity", String.valueOf(updatedQuantity));
+
+                                        // Save order details to "OrderWithTable" collection
+                                        Map<String, Object> orderData = new HashMap<>();
+                                        orderData.put("tableNumber", selectedTableNumber);
+                                        orderData.put("foodName", foodName);
+                                        orderData.put("quantity", quantityOrdered);
+                                        orderData.put("userName", userName); // Store customer name
+                                        orderData.put("userPhoneNumber", userPhoneNumber); // Store customer phone number
+                                        orderData.put("status", "in-progress"); // Order initially in-progress
+
+                                        // Add order data
+                                        orderReference = db.collection("OrderWithTable").document();
+                                        batch.set(orderReference, orderData);
+                                    } else {
+                                        Toast.makeText(this, foodName + ": Not enough stock. Available: " + currentQuantity, Toast.LENGTH_LONG).show();
+                                        confirmOrderButton.setEnabled(true);
+                                        return;
+                                    }
+                                }
+                            }
+
+                            // Commit the batch update
+                            batch.commit().addOnSuccessListener(aVoid -> {
+                                Toast.makeText(FoodItemDetailActivity.this, "Order confirmed!", Toast.LENGTH_SHORT).show();
+                                startTimer(); // Start countdown timer after order confirmation
+                            }).addOnFailureListener(e -> {
+                                Toast.makeText(FoodItemDetailActivity.this, "Failed to confirm order. Try again.", Toast.LENGTH_SHORT).show();
+                                confirmOrderButton.setEnabled(true);
+                            });
                         })
                         .addOnFailureListener(e -> {
-                            Toast.makeText(FoodItemDetailActivity.this, "Failed to confirm order. Try again.", Toast.LENGTH_SHORT).show();
-                            // Re-enable the button if there is an error
+                            Toast.makeText(this, "Error checking stock for " + foodName, Toast.LENGTH_SHORT).show();
                             confirmOrderButton.setEnabled(true);
                         });
             }
         } else {
             Toast.makeText(this, "Please check the order details.", Toast.LENGTH_SHORT).show();
-            // Re-enable the button if the order details are incorrect
             confirmOrderButton.setEnabled(true);
         }
     }
