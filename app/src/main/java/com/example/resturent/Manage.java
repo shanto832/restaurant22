@@ -305,6 +305,10 @@ public class Manage extends AppCompatActivity {
             Intent intent = new Intent(Manage.this, AddFoodActivity.class);
             startActivity(intent);
         });
+        btnWaiterDetails.setOnClickListener(v -> {
+            Intent intent = new Intent(Manage.this, WaiterActivity.class);
+            startActivity(intent);
+        });
 
         btnSeeCurrentOrders.setOnClickListener(v -> {
             Intent intent = new Intent(Manage.this, ZOrderDetailsActivity.class);
