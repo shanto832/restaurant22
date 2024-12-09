@@ -245,7 +245,7 @@ public class AddFoodActivity extends AppCompatActivity {
         Button submitButton = findViewById(R.id.submitButton);
         Button addMoreButton = findViewById(R.id.addMoreButton);
         Button adminHomeButton = findViewById(R.id.adminHomeButton);
-
+        Button updateFood= findViewById(R.id.updateFood);
         // Set up the animation for each button
         slideUpAnimation(selectImageButton);
         slideUpAnimation(submitButton);
@@ -258,6 +258,10 @@ public class AddFoodActivity extends AppCompatActivity {
 
         adminHomeButton.setOnClickListener(v -> {
             Intent intent = new Intent(AddFoodActivity.this, Manage.class);
+            startActivity(intent);
+        });
+        updateFood.setOnClickListener(v -> {
+            Intent intent = new Intent(AddFoodActivity.this, UpdateFoodActivity.class);
             startActivity(intent);
         });
     }
